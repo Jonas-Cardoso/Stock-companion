@@ -26,7 +26,6 @@ struct MarketDataResponse: Codable {
     
     var candleSticks: [CandleStick] {
         var result = [CandleStick]()
-        
         for index in 0..<open.count {
             result.append(.init(
                 date: Date(timeIntervalSince1970: timeStamps[index]),
@@ -35,7 +34,7 @@ struct MarketDataResponse: Codable {
                 open: open[index],
                 close: close[index]))
         }
-        
+    
         let sortedData = result.sorted(by: { $0.date > $1.date })
         print(sortedData[0])
         return sortedData

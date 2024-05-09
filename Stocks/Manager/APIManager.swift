@@ -21,7 +21,6 @@ final class APIManager {
     private init(){}
     
     // MARK: - Public
-    
     public func search(
         query: String,
         completion: @escaping(Result<SearchResponse,Error>) -> Void
@@ -58,7 +57,6 @@ final class APIManager {
         }
     }
     
-    
     public func marketData(
         for symbol: String,
         numberOfDays: TimeInterval = 7,
@@ -87,7 +85,6 @@ final class APIManager {
     }
     
     // MARK: - Private
-    
     private enum Endpoint: String {
         case search = "search"
         case topStories = "news"

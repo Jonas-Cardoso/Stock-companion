@@ -13,7 +13,6 @@ extension Notification.Name {
     static let didAddtoWatchList = Notification.Name("didAddtoWatchList")
 }
 // MARK: - NUMBER FORMATTER
-
 extension NumberFormatter {
     static let percentFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -32,13 +31,11 @@ extension NumberFormatter {
 }
 
 // MARK: - IMAGE VIEW
-
 extension UIImageView {
     func setImage(with url: URL?) {
         guard let url = url else {
             return
         }
-        
         DispatchQueue.global(qos: .userInteractive).async {
             let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
                 guard let data = data, error == nil else {
@@ -54,7 +51,6 @@ extension UIImageView {
 }
 
 // MARK: - TIME INTERVAL FORMATTER
-
 extension String {
     static func string(from timeInterval: TimeInterval) -> String {
         let date = Date(timeIntervalSince1970: timeInterval)
@@ -71,7 +67,6 @@ extension String {
 }
 
 //MARK: - DATE FORMATTER
-
 extension DateFormatter {
     static let newsDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -87,7 +82,6 @@ extension DateFormatter {
     
 }
 // MARK: - ADD SUBVIEW
-
 extension UIView {
     func addSubviews(_ views: UIView...) {
         views.forEach{

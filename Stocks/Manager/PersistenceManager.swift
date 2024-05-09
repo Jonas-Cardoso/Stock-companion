@@ -7,8 +7,6 @@
 
 import Foundation
 
-// we´ll save symbols, for each symbol a dictionary to the long form name
-
 final class PersistenceManager {
     static let shared = PersistenceManager()
     
@@ -22,7 +20,6 @@ final class PersistenceManager {
     private init() {}
     
     //MARK: - PUBLIC
-    
     public var watchlist:[String]{
         if !hasOnBoarded {
             userDefaults.set(true, forKey: Constants.onBoardedKey)

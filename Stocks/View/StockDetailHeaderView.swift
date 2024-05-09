@@ -10,9 +10,7 @@ import UIKit
 class StockDetailHeaderView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     private var metricViewModel: [MetricCollectionViewCell.ViewModel] = []
-    
-    // sub views
-    
+        
     // chart view
     private let chartView = StockChartView()
     // collection view
